@@ -59,3 +59,37 @@ func reverseWords(str: String) -> String {
     return reversed.joined(separator: " ")
 }
 print(reverseWords(str: "Swift Coding Challenges"))
+
+
+//Challenge 16: Fizz Buzz
+//Difficulty: Easy
+//Write a function that counts from 1 through 100, and prints “Fizz” if the counter is evenly divisible by 3, “Buzz” if it’s evenly divisible by 5, “Fizz Buzz” if it’s even divisible by three and five, or the counter number for all other cases.
+
+func fizzBuzz() {
+    for num in 1...100 {
+        if num % 3 == 0 && num % 5 == 0 {
+            print("Fizz Buzz")
+        } else if num % 3 == 0 {
+            print("Fizz")
+        } else if num % 5 == 0 {
+            print("Buzz")
+        } else {
+            print(num)
+        }
+    }
+}
+
+
+fizzBuzz()
+
+
+//Challenge 17: Generate a random number in a range
+//Difficulty: Easy
+//Write a function that accepts positive minimum and maximum integers, and returns a random
+//number between those two bounds, inclusive.
+
+func generateRandomNum(min: Int, max: Int) -> Int{
+    return Int.random(in: min...max)
+}
+
+print(generateRandomNum(min: 4, max: 9))
