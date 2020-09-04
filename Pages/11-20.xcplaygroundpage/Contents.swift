@@ -29,3 +29,33 @@ func threeDifferentLetters(str1: String, str2: String) -> Bool {
 }
 
 print(threeDifferentLetters(str1: "Clamp", str2: "Cramp"))
+
+// NOT SOLVED
+//Challenge 12: Find longest prefix
+//Difficulty: Tricky
+//Write a function that accepts a string of words with a similar prefix, separated by spaces, and
+//returns the longest substring that prefixes all words.
+
+func longestPrefix(input: String) -> String {
+    
+    var longestPrefix = ""
+    
+    let array = input.components(separatedBy: " ")
+    
+    return longestPrefix
+    
+}
+
+
+//Challenge 15: Reverse the words in a string
+//Difficulty: Taxing
+//Write a function that returns a string with each of its words reversed but in the original order,
+//without using a loop.
+ 
+func reverseWords(str: String) -> String {
+    let parts = str.components(separatedBy: " ")
+    // .map performs some axtion on each component
+    let reversed = parts.map { String($0.reversed())}
+    return reversed.joined(separator: " ")
+}
+print(reverseWords(str: "Swift Coding Challenges"))
